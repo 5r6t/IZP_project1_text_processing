@@ -24,31 +24,31 @@ Program se spouští v následující podobě: (./keyfilter značí umístění 
 ./keyfilter ADRESA
 Pokud je program spuštěn bez argumentů, bere zadanou adresu jako prázdný řetězec.
 
-Implementační detaily
+/// Implementační detaily
 Vstupní databáze adres
 Databáze adres jsou textová data, u kterých každý řádek označuje jednu adresu. Každý řádek obsahuje maximálně 100 znaků. Seznam adres je neuspořádaný. U všech dat nezáleží na velikosti písmen (tzv. case insensitive). Program musí podporovat alespoň 42 adres.
 
-Výstup programu
-Výstup programu může být trojího druhu:
+/// Výstup programu
+  Výstup programu může být trojího druhu:
 
-adresa nalezena,
-adresa vyžaduje specifikaci,
-adresa nenalezena.
-
-1. Adresa nalezena
-
-Found: S
-Tento výstup se tiskne, pokud je v databázi adres nalezena jediná adresa S, jejíž prefix odpovídá uživatelem zadané adrese ADRESA. (Pozn. prefix P řetězce S je takový řetězec, u kterého řetězec S začíná řetězcem P).
-
-2. Adresa vyžaduje specifikaci
-
-Enable: CHARS
-Pokud je v databázi adres nalezeno více adres odpovídající danému prefixu ADRESA, program pomocí takto naformátovaného řádku vytiskne seznam povolených kláves CHARS. CHARS je abecedně seřazený seznam znaků, u nichž pro každý znak C platí, že v databázi adres existuje adresa, jejíž prefix odpovídá spojení řetězce ADRESA s daným znakem C.
-
-3. Adresa nenalezena
-
-Not found
-Pokud v databázi adres neexistuje adresa, jejíž prefix by odpovídal zadanému řetězci ADRESA, vytiskne program toto hlášení.
+        adresa nalezena,
+        adresa vyžaduje specifikaci,
+        adresa nenalezena.
+        
+        1. Adresa nalezena
+        
+        Found: S
+        Tento výstup se tiskne, pokud je v databázi adres nalezena jediná adresa S, jejíž prefix odpovídá uživatelem zadané adrese ADRESA. (Pozn. prefix P řetězce S je takový řetězec, u kterého řetězec S začíná řetězcem P).
+        
+        2. Adresa vyžaduje specifikaci
+        
+        Enable: CHARS
+        Pokud je v databázi adres nalezeno více adres odpovídající danému prefixu ADRESA, program pomocí takto naformátovaného řádku vytiskne seznam povolených kláves CHARS. CHARS je abecedně seřazený seznam znaků, u nichž pro každý znak C platí, že v databázi adres existuje adresa, jejíž prefix odpovídá spojení řetězce ADRESA s daným znakem C.
+        
+        3. Adresa nenalezena
+        
+        Not found
+        Pokud v databázi adres neexistuje adresa, jejíž prefix by odpovídal zadanému řetězci ADRESA, vytiskne program toto hlášení.
 
 /// Omezení v projektu
 Je ZAKÁZANÉ použít následující funkce:
@@ -59,28 +59,30 @@ Je ZAKÁZANÉ použít následující funkce:
 
 /// Neočekávané chování
 
-Na chyby za běhu programu reagujte obvyklým způsobem: Na neočekávaná vstupní data, formát vstupních dat nebo chyby při volání funkcí reagujte přerušením programu se stručným a výstižným chybovým hlášením na příslušný výstup a odpovídajícím návratovým kódem. Hlášení budou v kódování ASCII česky nebo anglicky.
+Na chyby za běhu programu reagujte obvyklým způsobem: Na neočekávaná vstupní data, formát vstupních dat nebo chyby při volání funkcí reagujte přerušením programu se stručným a výstižným chybovým hlášením na příslušný výstup a odpovídajícím návratovým kódem. 
 
-Příklady vstupů a výstupů
+Hlášení budou v kódování ASCII česky nebo anglicky.
+
+///Příklady vstupů a výstupů
 Pomocný soubor adres:
 
-$ cat adresy.txt
-Praha
-Brno
-Bruntal
-Bratislava
-Příklad hledání slova brno
-
-$ ./keyfilter <adresy.txt
-Enable: BP
-$ ./keyfilter b <adresy.txt
-Enable: R
-$ ./keyfilter br <adresy.txt
-Enable: ANU
-$ ./keyfilter brn <adresy.txt
-Found: BRNO
-$ ./keyfilter be <adresy.txt
-Not found
+    $ cat adresy.txt
+    Praha
+    Brno
+    Bruntal
+    Bratislava
+    Příklad hledání slova brno
+    
+    $ ./keyfilter <adresy.txt
+    Enable: BP
+    $ ./keyfilter b <adresy.txt
+    Enable: R
+    $ ./keyfilter br <adresy.txt
+    Enable: ANU
+    $ ./keyfilter brn <adresy.txt
+    Found: BRNO
+    $ ./keyfilter be <adresy.txt
+    Not found
 
 /// Hodnocení
 
