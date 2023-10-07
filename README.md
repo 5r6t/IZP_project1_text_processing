@@ -21,15 +21,16 @@
 /// Překlad: Program překládejte s následujícími argumenty
 
 $ gcc -std=c11 -Wall -Wextra -Werror keyfilter.c -o keyfilter
-Syntax spuštění
-Program se spouští v následující podobě: (./keyfilter značí umístění a název programu):
+
+/// Syntax spuštění
+  * Program se spouští v následující podobě: (./keyfilter značí umístění a název programu):
 
 ./keyfilter ADRESA
-Pokud je program spuštěn bez argumentů, bere zadanou adresu jako prázdný řetězec.
+  * Pokud je program spuštěn bez argumentů, bere zadanou adresu jako prázdný řetězec.
 
 /// Implementační detaily
-Vstupní databáze adres
-Databáze adres jsou textová data, u kterých každý řádek označuje jednu adresu. Každý řádek obsahuje maximálně 100 znaků. Seznam adres je neuspořádaný. U všech dat nezáleží na velikosti písmen (tzv. case insensitive). Program musí podporovat alespoň 42 adres.
+  Vstupní databáze adres:
+    * Databáze adres jsou textová data, u kterých každý řádek označuje jednu adresu. Každý řádek obsahuje maximálně 100 znaků. Seznam   adres je neuspořádaný. U všech dat nezáleží na velikosti písmen (tzv. case insensitive). Program musí podporovat alespoň 42 adres.
 
 /// Výstup programu
   Výstup programu může být trojího druhu:
@@ -104,6 +105,6 @@ Na výsledném hodnocení mají hlavní vliv následující faktory:
   - Proudové zpracování vstupních adres a tisk výsledku hledání.
 ///Prémiové hodnocení
 
-  V případě implementace bez omezení počtu podporovaných adres (implementace proudového zpracování) je možné získat 1-2 prémiové body. Získání prémiových      bodů je podmíněno správnou implementací a dodržení zadání.
+  V případě implementace bez omezení počtu podporovaných adres (implementace proudového zpracování) je možné získat 1-2 prémiové body. Získání prémiových bodů je podmíněno správnou implementací a dodržení zadání.
 
 Naposledy změněno: čtvrtek, 5. října 2023, 22.38
