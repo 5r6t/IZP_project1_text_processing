@@ -3,40 +3,40 @@ Brno
 Bruntal
 Bratislava
 Ostrava
-Plzeň
+Plzen
 Olomouc
 Karlovy Vary
 Liberec
-Ústí nad Labem
-Hradec Králové
-České Budějovice
+Usti nad Labem
+Hradec Kralove
+Ceske Budejovice
 Pardubice
-Zlín
+Zlin
 Jihlava
 Teplice
-Děčín
+Decin
 Chomutov
 Kladno
 Most
-Havířov
+Havirov
 Opava
-Frýdek-Místek
+Frydek-Mistek
 Karlovy Vary
 Jablonec nad Nisou
-Mladá Boleslav
-Třebíč
-Kutná Hora
-Jičín
-Český Krumlov
+Mlada Boleslav
+Trebic
+Kutna Hora
+Jicin
+Cesky Krumlov
 Humpolec
-Pelhřimov
+Pelhrimov
 Strakonice
-Přerov
-Nový Jičín
-Uherské Hradiště
-Valašské Meziříčí
-Rožnov pod Radhoštěm
-Vsetín
+Prerov
+Novy Jicin
+Uherske Hradiste
+Valasske Mezirici
+Roznov pod Radhostem
+Vsetin
 Krnov
 Ostrov
 Turnov
