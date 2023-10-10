@@ -11,7 +11,7 @@ int main(int argc, char* argv[])
     while(fgets(buffer, 100, stdin) != NULL){
         printf("%s", buffer);
         if (!strcmp(buffer, "Praha\n")){
-            printf("Mame prahu, she aint leaving \n");
+            printf("Mame prah, she aint leaving \n");
         }
     }    
     return 0;
