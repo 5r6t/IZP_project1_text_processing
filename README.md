@@ -25,12 +25,16 @@ $ gcc -std=c11 -Wall -Wextra -Werror keyfilter.c -o keyfilter
 /// Syntax spuštění
   * Program se spouští v následující podobě: (./keyfilter značí umístění a název programu):
 
-./keyfilter ADRESA
-  * Pokud je program spuštěn bez argumentů, bere zadanou adresu jako prázdný řetězec.
+    ./keyfilter ADRESA
+      * Pokud je program spuštěn bez argumentů, bere zadanou adresu jako prázdný řetězec.
+        - povol celu abecedu na klavesnici
 
 /// Implementační detaily
   Vstupní databáze adres:
-    * Databáze adres jsou textová data, u kterých každý řádek označuje jednu adresu. Každý řádek obsahuje maximálně 100 znaků. Seznam   adres je neuspořádaný. U všech dat nezáleží na velikosti písmen (tzv. case insensitive). Program musí podporovat alespoň 42 adres.
+    - Databáze adres jsou textová data, u kterých každý řádek označuje jednu adresu. Každý řádek obsahuje maximálně 100 znaků. 
+    - Seznam adres je neuspořádaný. 
+    - case insensitive 
+    - Program musí podporovat alespoň 42 adres.
 
 /// Výstup programu
   Výstup programu může být trojího druhu:

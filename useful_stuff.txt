@@ -1,6 +1,8 @@
 /* https://www.youtube.com/watch?v=L-gRYBeA9YQ&feature=youtu.be&ab_channel=ToasterBro */
 /* gcc -std=c99 -Wall -Wextra -Werror keyfilter.c -o keyfilter */
 /* argc = pocet argumentov */
+ctype.h - napr check ci ja znak abecedny
+
 
 int main(int argc, char* argv[]) 
 {
