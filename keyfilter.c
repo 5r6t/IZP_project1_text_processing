@@ -2,35 +2,33 @@
 #include <stdlib.h>
 #include <stdbool.h> // pre true/false
 #include <ctype.h>
+#include <string.h>
 
+int main(int argc, char** argv) {
 
-int main(int argc, char** argv) 
-{  
+    char buffer[101]; 
+    char result[100]; // Pre pripad prazdneho stringu, budu sa tu ukladat prve pismena
+    int result_index = 0;
+    (void) argv;
     
-    char* key = argv[1]; // argument od pouzivatela, napr B v ./keyfiler B <adresy.txt
-    char buffer[101];
-    char match[101]= {0}; // prazdne pole pre ukladanie najdenych pismen
-    
-    (void) match;
-
-    
-    if (argc != 1 && argc != 2) {
-        fprintf(stderr, "Usage: %s [sequence]\n", argv[0]);
-        return 1;
-    }
-
     if (argc == 1) {
-        char buffer[101];
         while (fgets(buffer, sizeof(buffer), stdin)) {
-            if (isalpha(buffer[0])) {
-                fputc(toupper(buffer[0]), stdout);
+            if (buffer[0] != '\0') {
+                result[result_index++] = buffer[0];
             }
         }
-    
+    }
+    fprintf(stdout, "Enable:\n%s\n", result);
+
+    return 0;
+
+
+    /*
     for (int i = 0; key[i]; i++) // user argument to UPPER CASE letters - case-insensitive
     { 
         key[i] = toupper(key[i]);
     }
-}   
+    */
+}
 
     
