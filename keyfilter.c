@@ -1,35 +1,36 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdbool.h> // pre true/false
-
-// to do
-/*
-- pre prazdny input (./keyfilter )
-*/
+#include <ctype.h>
 
 
 int main(int argc, char** argv) 
-{
-    int ADDRESS[101]; // 100 characters + '/0'
-    (void) argv;
-    (void) argc;
-    (void) ADDRESS;
+{  
+    
+    char* key = argv[1]; // argument od pouzivatela, napr B v ./keyfiler B <adresy.txt
+    char buffer[101];
+    char match[101]= {0}; // prazdne pole pre ukladanie najdenych pismen
+    
+    (void) match;
 
     
-    if (argc < 2) // If too few arguments are given, end the program
+    if (argc != 1 && argc != 2) {
+        fprintf(stderr, "Usage: %s [sequence]\n", argv[0]);
+        return 1;
+    }
+
+    if (argc == 1) {
+        char buffer[101];
+        while (fgets(buffer, sizeof(buffer), stdin)) {
+            if (isalpha(buffer[0])) {
+                fputc(toupper(buffer[0]), stdout);
+            }
+        }
+    
+    for (int i = 0; key[i]; i++) // user argument to UPPER CASE letters - case-insensitive
     { 
-        fprintf(stderr, "Too few arguments!\n"); // If run without any arguments, return error
-        return 1; 
+        key[i] = toupper(key[i]);
     }
-    else if (argc == 2) // Handle address on input as an empty string - enable all available keys, check adresy.txt for first letters
-    {
-        fprintf(stdout, "ENABLE: ABCDEFGHIJKLMNOPQRSTUVWXYZ\n");
-        return 0;
-    }
-    // char buffer[101]; //kazdy riadok ma max 100 znakov
-
-    return 0;
-
 }   
 
     
