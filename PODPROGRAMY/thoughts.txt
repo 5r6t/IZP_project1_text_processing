@@ -1,0 +1,13 @@
+ako by mala InputString fungovat
+
+- multi check adries I guess - either while or for
+- nejake chybove hlasenia
+- check ascii znaku
+- whitespace ako platny znak
+
+co okrem InputString
+
+- not found funkcionalita
+- found 
+- osetrenie vstupov
+- neskocit z mosta
