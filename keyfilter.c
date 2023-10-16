@@ -8,13 +8,13 @@ int main(int argc, char** argv) {
 
     char buffer[101]; 
     char result[100]; // Pre pripad prazdneho stringu, budu sa tu ukladat prve pismena
-    int result_index = 0;
+    int outputAmount = 0;
     (void) argv;
     
     if (argc == 1) {
         while (fgets(buffer, sizeof(buffer), stdin)) {
             if (buffer[0] != '\0') {
-                result[result_index++] = buffer[0];
+                result[outputAmount++] = buffer[0];
             }
         }
     }

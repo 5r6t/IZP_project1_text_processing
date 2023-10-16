@@ -16,7 +16,7 @@ int main(int argc, char** argv) {
     for (int i = 0; sequence[i]; i++) {
         sequence[i] = toupper(sequence[i]);
     }
-
+    printf("Enable:");
     while (fgets(buffer, sizeof(buffer), stdin)) {
         int buffer_len = strlen(buffer);
         int seq_len = strlen(sequence);
@@ -32,7 +32,7 @@ int main(int argc, char** argv) {
                     char next_char = buffer[i + seq_len];
                     if (!found[(int)next_char] && !isspace(next_char)) {
                         found[(int)next_char] = 1;
-                        printf("Enable: %c\n", toupper(next_char)); // Convert to uppercase before printing
+                        printf("%c", toupper(next_char)); // Convert to uppercase before printing
                     }
                     else {
                         return 1;
@@ -41,7 +41,7 @@ int main(int argc, char** argv) {
             }
         }
     }
-    
+    printf("\n");
 
     return 0;
 }

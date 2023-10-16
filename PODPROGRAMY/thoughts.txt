@@ -4,9 +4,9 @@ ako by mala InputString fungovat
 - nejake chybove hlasenia
 - check ascii znaku
 - whitespace ako platny znak
-- myslim ze EmptyString ignoruje whitspace, takze bacha s kopirovanim(alebo ti Smrcka rozmlati lebku baseballkou)
+- myslim ze EmptyString ignoruje whitspace, takze bacha s kopirovanim kusov kodu(alebo ti Smrcka rozmlati lebku baseballkou)
 
-co okrem alebo do/ku InputString
+co do/ku InputString
 
 - not found funkcionalita
 - found 
