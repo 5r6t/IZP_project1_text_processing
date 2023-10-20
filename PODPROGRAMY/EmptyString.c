@@ -1,38 +1,39 @@
 #include <stdio.h>
-#include <string.h>
-#include <stdbool.h>
+#include <stdlib.h>
+#include <stdbool.h> 
 
-void EmptyString() {
+void emptyString () {
+
     char buffer[101];
-    bool printedChars[26] = { false }; // To keep track of printed uppercase letters
+    bool printedChars[101] = {false};
 
     while (fgets(buffer, sizeof(buffer), stdin)) {
         for (int i = 0; buffer[i] != '\0'; i++) {
             char addressChar = buffer[i];
 
-            if (addressChar >= 'A' && addressChar <= 'Z') { // If the letters are uppercase, proceed
-                int index = addressChar - 'A'; // Calculate the index for the character
-                printedChars[index] = true;
+            if (addressChar >= 'A' && addressChar <= 'Z') {
+                int idx = addressChar - 'A'; // highest ASCII value for capital letters
+                printedChars[idx] = true;
             }
         }
     }
-
     fprintf(stdout, "Enable:");
-    for (char letter = 'A'; letter <= 'Z'; letter++) {
-        int index = letter - 'A'; // Calculate the index for the character
-        if (printedChars[index]) {
-            putchar(letter); // Print the letter if it's marked as true
+    for (char lett = 'A'; lett <= 'Z'; lett++) {// lett = letter
+        int idxL = lett - 'A';
+        if (printedChars[idxL]) {
+            putchar(lett);
         }
     }
     putchar('\n');
 }
 
 int main(int argc, char** argv) {
+    
     (void) argv;
-
     if (argc == 1) {
-        EmptyString();
+        emptyString();
     }
-
-    return 0;
+    
 }
+
+    

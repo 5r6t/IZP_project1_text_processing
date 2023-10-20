@@ -1,32 +1,42 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <stdbool.h>
 #include <string.h>
 #include <ctype.h>
-
-void InputString(int argc, char** argv)
-{
-    (void) argc;
-    char buffer[101];
-    char *UserInput = argv[1]; // argv[0] is calling the program itself
-    int detChars[168] = {0}; //mame 42 adries, kazda nebude rovnaka, no povedzme ze aspon 4x vyssie cislo by malo stacit 42*4 = 
-    // dajme si input do toupper, aby boli vsetko iba velke pismena
-    (void) buffer;
-    (void) detChars;
-  
-    for (int i = 0; UserInput[i]; i++) {
-        UserInput[i]= toupper(UserInput[i]);
+void toUpp(char  *str) { //convert characters in string to uppercase
+    for (int i = 0; str[i]; i++) {
+        str[i] = toupper(str[i]);
     }
-
-
-    fprintf(stdout, "User input: %s", UserInput );
 }
 
-int main (int argc, char** argv)
-{
-    (void) argv;
+void inputString(char** argv) {
+    char buffer[101];
+    char userInput[100]=""; // Assuming the longest input is 100 characters
+    
+    strncpy(userInput, argv[1], sizeof(userInput) - 1); //
+    userInput[sizeof(userInput) - 1] = '\0'; // Ensure that null char is removed
+    toUpp(userInput); // User input to uppercase
 
-    if (argc == 2) {
-        InputString(argc, argv);
+    while (fgets(buffer, 100, stdin) != NULL) { //THIS WILL PRINT RELEVANT BUFFER IF ARGV[1]=
+        // Remove the newline character from the line
+        int len = strlen(buffer);
+        if (len > 0 && buffer[len - 1] == '\n') {
+            buffer[len - 1] = '\0';
+        }
+        
+        toUpp(buffer);
+
+        if (strcmp(buffer, userInput) == 0) {
+            fprintf(stdout, "%s\n", buffer);  
+        }
     }
+}
+
+int main(int argc, char** argv) 
+{
+    if (argc == 2) {
+        fprintf(stdout, "Found: ");
+        inputString(argv);
+    }
+    
+    return 0; 
 }

@@ -6,6 +6,14 @@ ako by mala InputString fungovat
 - whitespace ako platny znak
 - myslim ze EmptyString ignoruje whitspace, takze bacha s kopirovanim kusov kodu(alebo ti Smrcka rozmlati lebku baseballkou)
 
+REAL SHIT
+    porovnavame charactery v buffer a v userinput
+    nutnost pri porovnavani - dlzka userinput = dlzka buffer, ak nie tak buffer
+
+
+
+
+
 co do/ku InputString
 
 - not found funkcionalita
