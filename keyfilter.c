@@ -57,7 +57,6 @@ void enableString(char **argv) {
             
             if ((strstr(buffer, userInput) == buffer)) { // if the user input can be found in the address
                 int charIndex = (int)buffer[len]; // char to int (ascii value)
-                
                 printedChars[charIndex] = true; // Mark the next character as "true" in the bool array
                 counter++;
                 HandleUserInput(foundOutput, buffer);
