@@ -75,6 +75,7 @@ void enableString(char **argv) {
     } else if (counter ==1) {
             fprintf(stdout, "Found: %s", foundOutput);
         }
+    
     else {
         fprintf(stdout, "Not found\n");
     }
