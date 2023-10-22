@@ -19,7 +19,7 @@ void HandleUserInput(char *userInput, const char *input) {
 
 void emptyString () {
     char buffer[101];
-    bool printedChars[101] = {false};
+    bool printedChars[128] = {false}; // basic ASCII is 127 + nullchar
 
     while (fgets(buffer, sizeof(buffer), stdin)) {
         for (int i = 0; buffer[i] != '\0'; i++) {
@@ -55,11 +55,11 @@ void enableString(char **argv) {
         if (buffer[0] != '\0') {
             toUpp(buffer); // Convert the address to uppercase for comparison
             
-            if ((strstr(buffer, userInput) == buffer)) { // The user input matches the beginning of the address
-                int charIndex = (int)buffer[len]; // char to ASCII
+            if ((strstr(buffer, userInput) == buffer)) { // if the user input can be found in the address
+                int charIndex = (int)buffer[len]; // char to int (ascii value)
+                
                 printedChars[charIndex] = true; // Mark the next character as "true" in the bool array
                 counter++;
-                //printf("buffer:%s", buffer); //for debugging only
                 HandleUserInput(foundOutput, buffer);
             }
         }
@@ -74,26 +74,29 @@ void enableString(char **argv) {
          }
          //fprintf(stdout,"\n");
     } else if (counter ==1) {
-            printf("Found: %s", foundOutput);
+            fprintf(stdout, "Found: %s", foundOutput);
         }
     else {
-        fprintf(stdout, "Not found\n");
+        fprintf(stderr, "Not found\n");
     }
 }
 int main(int argc, char** argv) {
     if (argc == 1) {
         emptyString();
-    }
-    if (argc == 2) {
+    } else if (argc == 2) {
         enableString(argv);
         }
+        else if (argc > 2) {
+            fprintf(stderr, "Too much arguments!");
+        }
+    
     return 0;
 } 
 
 /*TODO
-printf to fprint f
-error messages/warnings
-remove/add un/necessary comments
-optimize
-make it work FOR THE ENTIRE ASCII REEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE
+printf to fprint f = DONE
+error messages/warnings =
+remove/add un/necessary comments =
+optimize =
+make it work FOR THE ENTIRE ASCII REEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE =
 */
