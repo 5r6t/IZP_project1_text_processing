@@ -98,5 +98,5 @@ printf to fprint f = DONE
 error messages/warnings =
 remove/add un/necessary comments =
 optimize =
-make it work FOR THE ENTIRE ASCII REEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE =
+make it work FOR THE ENTIRE ASCII =
 */
