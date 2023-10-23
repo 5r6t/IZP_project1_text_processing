@@ -14,7 +14,7 @@ void HandleUserInput(char *userInput, const char *input) {
     userInput[strlen(input)] = '\0'; 
     toUpp(userInput); 
 }
-/////// REDO REQUIRED
+
 void emptyString() {
     char buffer[101];
     bool printedChars[128] = {false}; // ASCII has 128 characters
