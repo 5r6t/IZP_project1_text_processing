@@ -30,13 +30,18 @@ Jicin
 Cesky Krumlov
 Humpolec
 Pelhrimov
-Strakonice
-Prerov
-Novy Jicin
-Uherske Hradiste
-Valasske Mezirici
-Roznov pod Radhostem
-Vsetin
+Strakoni
 Krnov
 Ostrov
 Turnov
+1
+2
+3
+!
+:
+_
+;
+~
+A
+B
+c

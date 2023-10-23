@@ -103,8 +103,8 @@ int main (int argc, char **argv)
 
 /*TODO
 printf to fprint f = DONE
-error messages/warnings = 
-remove/add un/necessary comments = on it
-optimize = emptystring is
-make it work FOR THE ENTIRE ASCII = seems to work, so DONE
+error messages/warnings =
+remove/add un/necessary comments =
+optimize =
+make it work FOR THE ENTIRE ASCII = Prerob nie len enable ale aj emptystring!!
 */

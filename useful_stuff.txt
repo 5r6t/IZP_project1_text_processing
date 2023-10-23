@@ -66,3 +66,4 @@ int main(int argc, char* argv[])
 
 // comparing buffer to string
 
+#define pmesg(s, ...) fprintf(stderr, __FILE__ ":%u: " s "\n",__LINE__, __VA_ARGS__ )
