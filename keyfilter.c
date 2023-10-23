@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include <stdlib.h>   
 #include <stdbool.h> // pre true/false
 #include <string.h> // string manipulation
 #include <ctype.h> // toupper
@@ -31,7 +30,6 @@ void emptyString () {
             }
         }
     }
-    
     fprintf(stdout, "Enable: ");
     for (char lett = 'A'; lett <= 'Z'; lett++) {
         int idx = lett - 'A';
@@ -43,10 +41,10 @@ void emptyString () {
 }
 
 void enableString(char **argv) {
-    char buffer[101];
+    char buffer[101]; 
     char userInput[100] = "";
-    char foundOutput[101] ="";
-    bool printedChars[128] = { false };
+    char foundOutput[101] =""; //reserved for single address to be printed in Found
+    bool printedChars[128] = { false }; //ASCII
     int counter = 0; // counts the amount of matched addresses
     HandleUserInput(userInput, argv[1]); 
     int len = strlen(userInput);
@@ -58,15 +56,16 @@ void enableString(char **argv) {
             if ((strstr(buffer, userInput) == buffer)) { // if the user input can be found in the address
                 int charIndex = (int)buffer[len]; // char to int (ascii value)
                 printedChars[charIndex] = true; // Mark the next character as "true" in the bool array
+
                 counter++;
-                HandleUserInput(foundOutput, buffer);
+                HandleUserInput(foundOutput, buffer); // result for found
             }
         }
     }
     
     if (counter > 1) {
         fprintf(stdout, "Enable: ");
-        for (int i = 'A'; i <= 'Z'; i++) {
+        for (int i = 0; i < 127; i++) {
             if (printedChars[i]) {
                 fprintf(stdout, "%c", (char)i);
             }
@@ -80,6 +79,7 @@ void enableString(char **argv) {
         fprintf(stdout, "Not found\n");
     }
 }
+
 int main(int argc, char** argv) {
     if (argc == 1) {
         emptyString();
@@ -98,5 +98,5 @@ printf to fprint f = DONE
 error messages/warnings =
 remove/add un/necessary comments =
 optimize =
-make it work FOR THE ENTIRE ASCII =
+make it work FOR THE ENTIRE ASCII = done wohoo
 */
