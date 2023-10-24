@@ -32,16 +32,5 @@ Humpolec
 Pelhrimov
 Strakoni
 Krnov
-Ostrov
+Ostrov hl.n.
 Turnov
-1
-2
-3
-!
-:
-_
-;
-~
-A
-B
-c
