@@ -1,6 +1,6 @@
 #include <stdio.h>
-#include <stdbool.h> // pre true/false
-#include <string.h> // string manipulation
+#include <stdbool.h> 
+#include <string.h> 
 #include <ctype.h> // toupper
 
 void toUpp(char  *str) { //convert characters in string to uppercase
@@ -56,7 +56,7 @@ void enableString (char **argv)
 
 	  if ((strstr (buffer, userInput) == buffer))
 	    {			// if the user input can be found in the address
-	    int charIndex = (int) buffer[len];	// get ascii value of a character
+	    int charIndex = (int) buffer[len];	// ascii value of a character
 	    printedChars[charIndex] = true;	// Mark this character as "true" in the bool array
 	    counter++;
 	    HandleUserInput (foundOutput, buffer);	// result for found
@@ -67,7 +67,7 @@ void enableString (char **argv)
   if (counter > 1) 
   {
     fprintf (stdout, "Enable: ");
-    for (int i = 0; i < 128; i++) 
+    for (int i = 0; i < 128; i++) //number of ASCII chars 
     {
 	    if (printedChars[i]) {
 	      fprintf (stdout, "%c", (char) i);
