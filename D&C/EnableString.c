@@ -52,4 +52,3 @@ int main (int argc, char** argv) {
         EnableString(argv);
     }
 }
-// DO NOT COPY end

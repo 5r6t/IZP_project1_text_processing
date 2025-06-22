@@ -103,11 +103,3 @@ int main (int argc, char **argv)
 
   return 0;
 }
-
-/*TODO
-printf to fprint f = DONE
-error messages/warnings = 
-remove/add un/necessary comments = on it
-optimize = emptystring is
-make it work FOR THE ENTIRE ASCII = seems to work, so DONE
-*/
